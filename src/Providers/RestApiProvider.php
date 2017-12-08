@@ -1,6 +1,6 @@
 <?php
 
-namespace NF\RestApi\Providers;
+namespace NFApi\Providers;
 
 use App\Widgets\SampleWidget;
 use Illuminate\Support\ServiceProvider;

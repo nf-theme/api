@@ -1,6 +1,6 @@
 <?php
 
-namespace NF\RestApi\Console;
+namespace NFApi\Console;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;

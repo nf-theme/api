@@ -1,6 +1,6 @@
 <?php
 
-namespace NF\RestApi\Routing;
+namespace NFApi\Routing;
 
 use Exception;
 

@@ -1,7 +1,7 @@
 <?php
 
 use NF\Facades\App;
-use NF\RestApi\Routing\Router;
+use NFApi\Routing\Router;
 
 $api = App::make(Router::class);
 
