@@ -2,16 +2,11 @@
 
 namespace NFApi\Providers;
 
-use App\Widgets\SampleWidget;
 use Illuminate\Support\ServiceProvider;
 use NF\Facades\App;
 
 class RestApiProvider extends ServiceProvider
 {
-    public $listen = [
-        SampleWidget::class,
-    ];
-
     public function register()
     {
         $route_file = App::appPath() . '/routes/api.php';
@@ -33,7 +28,7 @@ class RestApiProvider extends ServiceProvider
     public function registerCommand()
     {
         return [
-            \NF\RestApi\Console\PublishCommand::class,
+            \NFApi\Console\PublishCommand::class,
         ];
     }
 
