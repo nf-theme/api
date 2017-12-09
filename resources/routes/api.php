@@ -1,7 +1,7 @@
 <?php
 
 use NF\Facades\App;
-use NFApi\Routing\Router;
+use NightFury\RestApi\Routing\Router;
 
 $api = App::make(Router::class);
 

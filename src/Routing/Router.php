@@ -1,6 +1,6 @@
 <?php
 
-namespace NFApi\Routing;
+namespace NightFury\RestApi\Routing;
 
 use Exception;
 

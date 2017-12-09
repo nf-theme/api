@@ -12,7 +12,7 @@ composer require nf/restapi
 ```php
   'providers'  => [
         // .... Others providers 
-        \NFApi\Providers\RestApiProvider::class,
+        \NightFury\RestApi\Providers\RestApiProvider::class,
     ],
 ```
 ##### Step 3: Run publish command
@@ -28,7 +28,7 @@ php command restapi:publish
 <?php
 
 use NF\Facades\App;
-use NFApi\Routing\Router;
+use NightFury\RestApi\Routing\Router;
 
 $api = App::make(Router::class);
 

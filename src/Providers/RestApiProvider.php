@@ -1,10 +1,10 @@
 <?php
 
-namespace NFApi\Providers;
+namespace NightFury\RestApi\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use NFApi\Console\PublishCommand;
-use NFApi\Routing\Router;
+use NightFury\RestApi\Console\PublishCommand;
+use NightFury\RestApi\Routing\Router;
 
 class RestApiProvider extends ServiceProvider
 {
