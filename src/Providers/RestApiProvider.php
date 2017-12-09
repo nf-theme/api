@@ -4,6 +4,7 @@ namespace NFApi\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use NFApi\Console\PublishCommand;
+use NFApi\Routing\Router;
 
 class RestApiProvider extends ServiceProvider
 {
@@ -23,6 +24,13 @@ class RestApiProvider extends ServiceProvider
 
         }
 
+    }
+
+    public function boot()
+    {
+        $this->app->singleton(Router::class, function ($app) {
+            return new Router;
+        });
     }
 
     public function registerCommand()
