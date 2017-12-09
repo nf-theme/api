@@ -10,6 +10,10 @@ class RestApiProvider extends ServiceProvider
 {
     public function register()
     {
+        $this->app->singleton(Router::class, function ($app) {
+            return new Router;
+        });
+
         $route_file = $this->app->appPath() . '/routes/api.php';
         if (file_exists($route_file)) {
             $api = require_once $route_file;
@@ -24,13 +28,6 @@ class RestApiProvider extends ServiceProvider
 
         }
 
-    }
-
-    public function boot()
-    {
-        $this->app->singleton(Router::class, function ($app) {
-            return new Router;
-        });
     }
 
     public function registerCommand()
