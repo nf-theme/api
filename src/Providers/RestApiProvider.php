@@ -3,13 +3,13 @@
 namespace NFApi\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use NF\Facades\App;
+use NFApi\Console\PublishCommand;
 
 class RestApiProvider extends ServiceProvider
 {
     public function register()
     {
-        $route_file = App::appPath() . '/routes/api.php';
+        $route_file = $this->app->appPath() . '/routes/api.php';
         if (file_exists($route_file)) {
             $api = require_once $route_file;
 
@@ -28,7 +28,7 @@ class RestApiProvider extends ServiceProvider
     public function registerCommand()
     {
         return [
-            \NFApi\Console\PublishCommand::class,
+            PublishCommand::class,
         ];
     }
 
